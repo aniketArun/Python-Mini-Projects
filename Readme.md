@@ -1,4 +1,4 @@
-```markdown
+
 # Django CSV File Upload and Display
 
 This Django project allows users to upload a CSV file, and it displays the content of the uploaded CSV in an HTML table.
@@ -63,5 +63,3 @@ Contributions are welcome! Please feel free to submit a Pull Request or open an 
     ```
     aniketpen8478@gmail.com
     ```
-
-```
