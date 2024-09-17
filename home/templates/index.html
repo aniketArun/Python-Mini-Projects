@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+
+{% block start %}
+<div class="container shadow-lg col-6 mt-5 p-5">
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Choose the CSV File</label>
+          <input type="file" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp", name = "csv_file">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
+
+<div class="container mt-5 p-5"></div>
+    <table class="table ms-5">
+        <thead>
+            <tr>
+                {% for header in csv_data.0 %}
+                    <th>{{ header }}</th>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in csv_data|slice:"1:" %}
+                <tr>
+                    {% for item in row %}
+                        <td>{{ item }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </tbody>
+      </table>
+</div>
+
+{% endblock start %}
+
+
