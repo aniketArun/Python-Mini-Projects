@@ -60,6 +60,4 @@ This Django project allows users to upload a CSV file, and it displays the conte
 Contributions are welcome! Please feel free to submit a Pull Request or open an issue for suggestions and improvements.
 
 ## Contact
-    ```
     aniketpen8478@gmail.com
-    ```
